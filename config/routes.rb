@@ -25,9 +25,9 @@ Rails.application.routes.draw do
 
   post("/insert_course", { :controller => "courses", :action => "create" })
 
-  get("/courses", { :controller => "courses_controller", :action => "index" })
+  get("/courses", { :controller => "courses", :action => "index" })
   
-  get("/modify_course/:path_id", { :controller => "courses", :action => "update" })
+  post("/modify_course/:path_id", { :controller => "courses", :action => "update" })
 
   get("/delete_course/:path_id", { :controller => "courses", :action => "destroy" })
 
